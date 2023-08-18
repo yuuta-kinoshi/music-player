@@ -1,0 +1,252 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+}
+
+:root {
+    --color-theme: rgba(104, 2, 151, 0.7);
+    --color-secundary: #8c00cd;
+    --color-terciaria: #ae00ff;
+    --color-shadow: #000;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background: url(files/bg-purple.webp) center / cover no-repeat;
+    overflow: hidden  ;
+}
+
+.container {
+    width: 95%;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+
+.player {
+    width: 100%;
+    max-width: 100%;
+    margin: auto;
+    height: calc(100vh);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.player-wrapper {
+    height: 90vh;
+    width: 100%;
+    max-width:400px;
+    max-height: 850px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur( 13.5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+.header-player {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px 0;
+    font-weight: 500;
+} 
+
+.header-player img {
+    border-radius: 50%;
+}
+
+.cover {
+    height: 350px;
+    background: url('https://placehold.it/300') center / cover no-repeat;
+}
+
+.player-wrapper,
+.content,
+.controls {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#seek-bar {
+    width: 100%;
+}
+
+.time {
+    display: flex;
+    justify-content: space-between;
+}
+
+.time p {
+  transform: translateY(-10px);
+}
+
+.bttnsControl {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.fa-play,
+.fa-pause {
+    font-size: 3em;
+    cursor: pointer;
+}
+
+.fa-pause {
+    display: none;
+}
+
+.fa-backward,
+.fa-forward {
+    font-size: 2em;
+    cursor: pointer;
+}
+
+.volControl {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    width: 50%;
+}
+
+.volControl i {
+  flex: 0%;
+  cursor: pointer;
+}
+.volControl input {
+  flex: 70%;
+}
+
+#vol-bar {
+    width: 50%;
+}
+
+#anime-girl {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+input[type=range] {
+    height: 25px;
+    -webkit-appearance: none;
+    margin: 10px 0;
+    width: 100%;
+    background: none;
+  }
+  input[type=range]:focus {
+    outline: none;
+  }
+  input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 5px;
+    cursor: pointer;
+    animate: 0.2s;
+    box-shadow: 0px 0px 0px #000000;
+    background: #FFFFFF;
+    border-radius: 50px;
+    border: 0px solid #000000;
+  }
+  input[type=range]::-webkit-slider-thumb {
+    box-shadow: 0px 0px 0px #000000;
+    border: 1px solid #2497E3;
+    height: 18px;
+    width: 18px;
+    border-radius: 25px;
+    background: #FFFFFF;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -7px;
+  }
+  input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #FFFFFF;
+  }
+  input[type=range]::-moz-range-track {
+    width: 100%;
+    height: 5px;
+    cursor: pointer;
+    animate: 0.2s;
+    box-shadow: 0px 0px 0px #000000;
+    background: #FFFFFF;
+    border-radius: 50px;
+    border: 0px solid #000000;
+  }
+  input[type=range]::-moz-range-thumb {
+    box-shadow: 0px 0px 0px #000000;
+    border: 1px solid #2497E3;
+    height: 18px;
+    width: 18px;
+    border-radius: 25px;
+    background: #FFFFFF;
+    cursor: pointer;
+  }
+  input[type=range]::-ms-track {
+    width: 100%;
+    height: 5px;
+    cursor: pointer;
+    animate: 0.2s;
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+  }
+  input[type=range]::-ms-fill-lower {
+    background: #FFFFFF;
+    border: 0px solid #000000;
+    border-radius: 100px;
+    box-shadow: 0px 0px 0px #000000;
+  }
+  input[type=range]::-ms-fill-upper {
+    background: #FFFFFF;
+    border: 0px solid #000000;
+    border-radius: 100px;
+    box-shadow: 0px 0px 0px #000000;
+  }
+  input[type=range]::-ms-thumb {
+    margin-top: 1px;
+    box-shadow: 0px 0px 0px #000000;
+    border: 1px solid #2497E3;
+    height: 18px;
+    width: 18px;
+    border-radius: 25px;
+    background: #FFFFFF;
+    cursor: pointer;
+  }
+  input[type=range]:focus::-ms-fill-lower {
+    background: #FFFFFF;
+  }
+  input[type=range]:focus::-ms-fill-upper {
+    background: #FFFFFF;
+  }  
+
+
+  @media screen and (max-width: 450px) {
+    .player-wrapper {
+      width: 100%;
+      max-width: 100%;
+      height: 100vh;
+      max-height: 100%;
+      border-radius: 0px;
+    }
+  }
+  
+  @media screen and (max-height: 560px) {
+    #anime-girl {
+      display: none;
+    }
+
+    .volControl {
+      transform: translateY(-10px);
+    }
+  }
